@@ -18,7 +18,8 @@ Route::get('/', function () {
 });
 
 //Route::get('/posts', [PostController::class, 'index']);
-Route::get('/todos', 'TodosController@index')->name('todos.index');
+//Route::get('/todos', 'TodosController@index')->name('todos.index');
+Route::get('/todos', 'TodosController@index');
 
 Route::get('/about', function(){
     return view('about');
