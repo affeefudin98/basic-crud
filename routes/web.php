@@ -22,6 +22,12 @@ Route::get('/', function () {
 Route::get('/todos', 'TodosController@index');
 
 Route::get('/todos/{todo}', 'TodosController@show');
+Route::get('/new-todos', 'TodosController@create');
+Route::post('/store-todos', 'TodosController@store')->name('todos.store');
+Route::get('/todos/{todo}/edit', 'TodosController@edit');
+Route::post('/todos/{todo}/update-todos', 'TodosController@update')->name('todos.update');
+Route::get('/todos/{todo}/delete', 'TodosController@destroy');
+
 
 Route::get('/about', function(){
     return view('about');

@@ -12,7 +12,7 @@ class TodoFactory extends Factory
      *
      * @var string
      */
-    protected $model = Model::class;
+    protected $model = Todo::class;
 
     /**
      * Define the model's default state.
@@ -22,7 +22,10 @@ class TodoFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $faker->sentence(3),
+            'description' => $faker->paragraph(2),
+            'completed' => false
+           
         ];
     }
 }
